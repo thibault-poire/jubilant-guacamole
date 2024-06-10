@@ -1,4 +1,7 @@
 ci:
+  upload:
+    target: 'temporary-public-storage'
+
   settings:
     onlyCategories:
       - 'accessibility'

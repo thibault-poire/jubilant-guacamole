@@ -11,7 +11,7 @@
 </script>
 
 <Header>
-	<a slot="logo" href="/">
+	<a slot="logo" href="/" aria-label="Homepage">
 		<Logo height={48} />
 	</a>
 

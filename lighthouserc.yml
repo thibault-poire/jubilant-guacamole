@@ -1,0 +1,21 @@
+ci:
+  upload:
+    target: 'temporary-public-storage'
+
+  collect:
+    url:
+      - 'http://localhost:4173/'
+      - 'http://localhost:4173/examples'
+
+    numberOfRuns: 1
+    startServerCommand: 'npm run preview'
+
+    settings:
+      onlyCategories:
+        - 'accessibility'
+
+  assert:
+    assertions:
+      'categories:accessibility':
+        - 'error'
+        - minScore: 1

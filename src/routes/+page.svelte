@@ -2,6 +2,10 @@
 	import Title from '$lib/components/title/Title.svelte';
 </script>
 
+<svelte:head>
+	<title>Hello world</title>
+</svelte:head>
+
 <Title level={1}>Hello World</Title>
 
 <p>

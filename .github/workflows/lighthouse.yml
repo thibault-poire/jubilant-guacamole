@@ -10,4 +10,5 @@ jobs:
           node-version: 18
       - run: npm install && npm install -g @lhci/cli@0.13.x
       - run: npm run build
+      - run: npm run preview
       - run: lhci autorun

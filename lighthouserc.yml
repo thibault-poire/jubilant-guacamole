@@ -1,8 +1,8 @@
 ci:
   collect:
     url:
-      - 'http://localhost:5173/'
-      - 'http://localhost:5173/examples'
+      - 'http://localhost:4173/'
+      - 'http://localhost:4173/examples'
 
     numberOfRuns: 5
 

@@ -27,7 +27,7 @@
 </article>
 
 <article class="mt-16">
-	<Title level={4}>Title n°2</Title>
+	<Title level={3}>Title n°2</Title>
 
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor felis, pulvinar sed varius

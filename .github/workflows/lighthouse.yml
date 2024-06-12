@@ -24,9 +24,10 @@ jobs:
 
       - run: lhci autorun --preset=mobile
         continue-on-error: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - run: lhci autorun --preset=desktop
         continue-on-error: true
-
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

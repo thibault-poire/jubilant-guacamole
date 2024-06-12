@@ -1,9 +1,0 @@
-name: test
-on: [workflow_dispatch]
-
-jobs:
-  message:
-    runs-on: ubuntu-latest
-    steps:
-      - name: display a markdown message
-        run: echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY

@@ -22,7 +22,12 @@ jobs:
 
       - run: npm run build
 
-      - run: lhci autorun --preset=desktop
+      - run: lhci autorun --collect.settings.preset=desktop
+        continue-on-error: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - run: lhci autorun
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

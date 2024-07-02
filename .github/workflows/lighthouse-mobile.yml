@@ -1,4 +1,4 @@
-name: lighthouse-ci
+name: lighthouse-ci mobile
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
 
       - run: npm run build
 
-      - run: lhci autorun --collect.settings.preset=desktop
+      - run: lhci autorun
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

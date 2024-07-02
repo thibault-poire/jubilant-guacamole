@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       device:
-        descriptions: 'Device'
+        description: 'Device'
         default: 'desktop'
         type: choice
         options:
@@ -31,14 +31,14 @@ jobs:
 
       - run: npm run build
 
-      - if: ${{inputs.device == 'desktop'}}
+      - if: ${{inputs.device != 'mobile'}}
         run: lhci autorun --collect.settings.preset=desktop
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - if: ${{inputs.device == 'mobile'}}
-        run: lhci autorun --collect.settings.preset=desktop
+        run: lhci autorun
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
